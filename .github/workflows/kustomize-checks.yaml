@@ -1,0 +1,17 @@
+name: checks
+
+on:
+  pull_request:
+
+jobs:
+
+  unencrypted-secret-check:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    container: eu.gcr.io/swade1987/kubernetes-toolkit:1.31.0
+    steps:
+      - name: clone repo
+        uses: actions/checkout@v4
+      - name: unencrypted-secret-check
+        run: make check-for-unencrypted-secrets
