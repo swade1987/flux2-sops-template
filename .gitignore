@@ -1,3 +1,4 @@
 .idea/
 _test/
 .DS_Store
+/secrets/age-key.txt

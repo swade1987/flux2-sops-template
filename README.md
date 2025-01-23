@@ -1,5 +1,3 @@
-[![kustomize-checks](https://github.com/swade1987/flux2-kustomize-template/actions/workflows/kustomize-checks.yaml/badge.svg)](https://github.com/swade1987/flux2-kustomize-template/actions/workflows/kustomize-checks.yaml)
-
 # Flux SOPs Template
 
 This is an opinionated template to use as a starting point for managing secrets with Flux and SOPs.
@@ -10,11 +8,12 @@ This is an opinionated template to use as a starting point for managing secrets 
 
 **Solution:** Encrypt your Secret using a KMS key for the cluster with SOPs.
 
-For more information on Mozilla SOPs see [here](https://github.com/getsops/sops).
+For more information on SOPs see [here](https://github.com/getsops/sops).
 
 ## Features
 
 - Leverages [SOPs](https://github.com/getsops/sops) for encryption/decryption
+- Leverages [age](https://github.com/FiloSottile/age) for file encryption/decryption
 - Commits must meet [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
     - Automated with GitHub Actions ([commit-lint](https://github.com/conventional-changelog/commitlint/#what-is-commitlint))
 - Pull Request titles must meet [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
@@ -46,13 +45,9 @@ As well as this it validates that unencrypted secrets are not committed to the r
 
 For an example of how to add a secret to this repository see [here](docs/usage.md).
 
-## How does this repository work?
+## How does this repository work with Flux?
 
-For more information on how this repository works, please read [here](docs/deployment.md).
-
-## Adding a new cluster
-
-For more information on how to add a new cluster to this repository, please read [here](docs/adding-new-cluster.md).
+For more information on how this repository works with Flux, please read [here](docs/flux-integration.md).
 
 ## Contributing to the repository
 
