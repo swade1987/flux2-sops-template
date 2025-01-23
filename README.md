@@ -1,5 +1,3 @@
-[![kustomize-checks](https://github.com/swade1987/flux2-kustomize-template/actions/workflows/kustomize-checks.yaml/badge.svg)](https://github.com/swade1987/flux2-kustomize-template/actions/workflows/kustomize-checks.yaml)
-
 # Flux SOPs Template
 
 This is an opinionated template to use as a starting point for managing secrets with Flux and SOPs.
