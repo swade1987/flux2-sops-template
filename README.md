@@ -21,6 +21,11 @@ For more information on SOPs see [here](https://github.com/getsops/sops).
 - Commits must be signed with [Developer Certificate of Origin (DCO)](https://developercertificate.org/)
     - Automated with GitHub App ([DCO](https://github.com/apps/dco))
 
+## Production Environments
+While this template uses `age` for encryption, for production environments we recommend transitioning to AWS KMS.
+
+We've provided a detailed guide on how to adapt this template for production use with AWS KMS, [here](docs/production-usage.md).
+
 ## Directory Structure
 
 ```
