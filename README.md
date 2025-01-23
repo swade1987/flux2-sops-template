@@ -10,17 +10,22 @@ This is an opinionated template to use as a starting point for managing secrets 
 
 **Solution:** Encrypt your Secret using a KMS key for the cluster with SOPs.
 
-For more information on Mozilla SOPs see [here](https://github.com/getsops/sops).
+For more information on SOPs see [here](https://github.com/getsops/sops).
 
 ## Features
 
 - Leverages [SOPs](https://github.com/getsops/sops) for encryption/decryption
+- Leverages [age](https://github.com/FiloSottile/age) for file encryption/decryption
 - Commits must meet [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
     - Automated with GitHub Actions ([commit-lint](https://github.com/conventional-changelog/commitlint/#what-is-commitlint))
 - Pull Request titles must meet [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
     - Automated with GitHub Actions ([pr-lint](https://github.com/amannn/action-semantic-pull-request))
 - Commits must be signed with [Developer Certificate of Origin (DCO)](https://developercertificate.org/)
     - Automated with GitHub App ([DCO](https://github.com/apps/dco))
+
+## Warning: Production Use
+
+For production I would use `kms` rather than `age` for encryption/decryption. For more information on the configuration for this, see [here](docs/production-usage.md).
 
 ## Directory Structure
 

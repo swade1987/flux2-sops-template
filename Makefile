@@ -4,8 +4,8 @@ SOPS_VERSION = v3.9.3
 YQ_VERSION = v4.44.3
 
 initialise: init
-	pre-commit --version || brew install pre-commit
 	ag -- version || brew install the_silver_searcher
+	age --version || brew install age
 	pre-commit --version || brew install pre-commit
 	pre-commit install --install-hooks
 	pre-commit run -a

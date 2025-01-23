@@ -45,9 +45,9 @@ if ! which ag > /dev/null 2>&1; then
 fi
 
 # Make sure you have the latest version of sops installed.
-SOPS_VERSION_CHECK=$(sops --version | grep -c "3.6.1")
+SOPS_VERSION_CHECK=$(sops --version | grep -c "3.9.3")
 if [ "${SOPS_VERSION_CHECK}" -ne 1 ]; then
-  echo 'Please install sops v3.6.1'
+  echo 'Please install sops v3.9.3'
   exit 1
 fi
 
