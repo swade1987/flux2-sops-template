@@ -1,4 +1,4 @@
-name: checks
+name: unencrypted-secret-check
 
 on:
   pull_request:
