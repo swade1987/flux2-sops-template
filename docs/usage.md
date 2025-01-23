@@ -14,11 +14,15 @@ To encrypt secrets for all clusters run
 make encrypt-all
 ```
 
+This uses the `age` key defined in the [.sops.yaml](../.sops.yaml) file for each cluster.
+
 ## How can I decrypt a lot of secrets at once?
 
 ```
 make decrypt-all
 ```
+
+This uses the `age` key defined in the [.sops.yaml](../.sops.yaml) file for each cluster.
 
 ## How can I clean out my local directory?
 

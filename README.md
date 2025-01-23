@@ -6,7 +6,7 @@ This is an opinionated template to use as a starting point for managing secrets 
 
 **Problem:** "I can manage all my Kubernetes config in git, except Secrets."
 
-**Solution:** Encrypt your Secret using a KMS key for the cluster with SOPs.
+**Solution:** Encrypt your Secret with SOPs.
 
 For more information on SOPs see [here](https://github.com/getsops/sops).
 
