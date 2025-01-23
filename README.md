@@ -23,10 +23,6 @@ For more information on SOPs see [here](https://github.com/getsops/sops).
 - Commits must be signed with [Developer Certificate of Origin (DCO)](https://developercertificate.org/)
     - Automated with GitHub App ([DCO](https://github.com/apps/dco))
 
-## Warning: Production Use
-
-For production I would use `kms` rather than `age` for encryption/decryption. For more information on the configuration for this, see [here](docs/production-usage.md).
-
 ## Directory Structure
 
 ```
@@ -51,13 +47,9 @@ As well as this it validates that unencrypted secrets are not committed to the r
 
 For an example of how to add a secret to this repository see [here](docs/usage.md).
 
-## How does this repository work?
+## How does this repository work with Flux?
 
-For more information on how this repository works, please read [here](docs/deployment.md).
-
-## Adding a new cluster
-
-For more information on how to add a new cluster to this repository, please read [here](docs/adding-new-cluster.md).
+For more information on how this repository works with Flux, please read [here](docs/flux-integration.md).
 
 ## Contributing to the repository
 
