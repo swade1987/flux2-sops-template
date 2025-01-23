@@ -22,7 +22,7 @@ apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
   name: k8s-secrets
-  namespace: flux-repos
+  namespace: flux-system
 spec:
   interval: 1m0s
   ref:
@@ -37,7 +37,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: k8s-secrets
-  namespace: flux-repos
+  namespace: flux-system
 spec:
   interval: 10m0s
   sourceRef:
