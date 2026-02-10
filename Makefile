@@ -1,6 +1,6 @@
 SHELL = /bin/sh
 UNAME := $(shell uname -s)
-SOPS_VERSION = v3.9.3
+SOPS_VERSION = v3.11.0
 YQ_VERSION = v4.44.3
 
 initialise: init
