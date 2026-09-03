@@ -1,7 +1,6 @@
 # Flux SOPs Template
 
 [![unencrypted-secret-check](https://github.com/swade1987/flux2-sops-template/actions/workflows/checks.yaml/badge.svg)](https://github.com/swade1987/flux2-sops-template/actions/workflows/checks.yaml)
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/swade1987/flux2-sops-template/badge)](https://scorecard.dev/viewer/?uri=github.com/swade1987/flux2-sops-template)
 
 This is an opinionated template to use as a starting point for managing secrets with Flux and SOPs.
 
