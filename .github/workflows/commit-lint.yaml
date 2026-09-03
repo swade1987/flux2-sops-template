@@ -1,7 +1,7 @@
 name: commit-lint
 
 on:
-  pull_request_target:
+  pull_request:
     types:
       - opened
       - edited
@@ -14,7 +14,15 @@ permissions:
 jobs:
   commit-lint:
     name: commit-lint
+    # Dependabot's own commit messages don't pass commitlint's stricter
+    # subject-case rules (its PR titles do - pr-lint still runs for these).
+    # Keyed on the PR's actual author, not github.actor - a manual "update
+    # branch" would otherwise flip actor away from dependabot[bot] and make
+    # this job run for real on a Dependabot commit it was meant to exempt.
+    if: github.event.pull_request.user.login != 'dependabot[bot]'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-      - uses: wagoid/commitlint-github-action@3d28780bbf0365e29b144e272b2121204d5be5f3 # v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@b948419dd99f3fd78a6548d48f94e3df7f6bf3ed # v6.2.1
