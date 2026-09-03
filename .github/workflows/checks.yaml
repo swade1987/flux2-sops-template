@@ -3,6 +3,11 @@ name: unencrypted-secret-check
 on:
   pull_request:
 
+# Safe floor for any job that doesn't declare its own permissions; the
+# job below already declares its own anyway.
+permissions:
+  contents: read
+
 jobs:
 
   unencrypted-secret-check:
